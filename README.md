@@ -15,7 +15,7 @@ The USPS Dataset (United States Postal Service) is a dataset of handwritten digi
  
 ## Classification using Logistic Regression
 ### Introduction
-Logistic regression is a fundamental machine learning algorithm that uses a linear weighted combination of features and generate probability-based prediction on different classes. As we have to implement a model that can predict values for digits from 0 to 9, we are using a Multinomial Logistic Regression i.e. one with multiple outputs, each of which is used to predict a single output class [10].
+Logistic regression is a fundamental machine learning algorithm that uses a linear weighted combination of features and generate probability-based prediction on different classes. As we have to implement a model that can predict values for digits from 0 to 9, we are using a Multinomial Logistic Regression i.e. one with multiple outputs, each of which is used to predict a single output class.
 In a Multinomial Logistic Regression, each summation node uses its own set of weights to scale the inputs and sum them together. The outputs of these summations are then passed to a SoftMax function, which normalized each output node based on the sum of all the unnormalized nodes.
  
 ### One Hot Vector Encoding
@@ -29,7 +29,7 @@ Where   is the output value Y of a training model.
 ### Loss Function & Gradient
 Cross-entropy loss function or log loss function is used to measure the performance of a classification model whose input probability value is between 0 & 1. Here, as the problem needs a multi class solution i.e. from 0…9, we are using a variation of Cross Entropy loss function that uses a negative log-likelihood function to calculate error. Hence, we apply log function to the likelihood function of observations as follows:
  
-Now in order to update the weights of the model, we have to use the gradient descent method along with the loss function. The gradient descent method involves calculating the derivative of squared error function with respect to the weights of the model. This is called as Backpropagation [1]. Hence, the basis gradient descent formula is used for the operation: 
+Now in order to update the weights of the model, we have to use the gradient descent method along with the loss function. The gradient descent method involves calculating the derivative of squared error function with respect to the weights of the model. This is called as Backpropagation. Hence, the basis gradient descent formula is used for the operation: 
  
 Where y is the output of the model & t is the target value vector.
 ### Hyperparameter Tuning & Results
@@ -53,7 +53,7 @@ The final values for average accuracy based on the confusion matrix are as follo
 ## Classification using Multilayer Neural Network
 ### Introduction
 Artificial Neural Networks, also abbreviated as ANN, are build based on the concept of Human Brain. Like the human brain, the ANN is comprised of n number of neurons that work together to model complex pattern & prediction problems. 
-For any ANN architecture, there is one input layer, one or more than one hidden layer & one output layer. The multiple hidden layers are used to determine distinctive patterns in the data taken as input. This in turn increases the accuracy of the neural model. Weights ‘W’ is a concept that is used to determine the importance of each neuron in the network [5]. 
+For any ANN architecture, there is one input layer, one or more than one hidden layer & one output layer. The multiple hidden layers are used to determine distinctive patterns in the data taken as input. This in turn increases the accuracy of the neural model. Weights ‘W’ is a concept that is used to determine the importance of each neuron in the network. 
 Hence more the weight associated with a neuron, more important it is for generating the required output. In order to increase the efficiency of the neural network, we need to adjust weights assigned to every edge connecting two neurons in the network. 
 ### Example
 Now let's try to understand some key points of a simple neural network using the figure in the article written by Jahnavi Mahanta,
@@ -63,7 +63,7 @@ In the figure above, the X1, X2 & X3 together comprise of the input layer. Simil
 Where F = W1*X1 + W2*X2 + W3*X3
 ### Hyperparameter Tuning & Results
 
-In order to extract maximum correct output from the model, we have tried to tune following hyperparameters as follows [11]:
+In order to extract maximum correct output from the model, we have tried to tune following hyperparameters as follows:
 * **Number of nodes in a Hidden Layer:** It represents the number of neurons in the nth hidden layer.
 * **Activation function:** Activation Functions are used by Neural Networks as an approximation function from one layer to another. Activation Functions work to introduce nonlinearity in the models. One of the most used function is the rectifier activation function ‘relu’. Also ‘sigmoid’ function is used in neural networks making binary predictions, whereas ‘softmax’ function is used in neural networks making multi class predictions.
 * **Alpha:** It is a L2 penalty (regularization term) parameter.
@@ -92,8 +92,8 @@ The final values for average accuracy based on the confusion matrix are as follo
 
 ### Introduction
 Decision Trees are one of the most used classifiers in the field of data mining. This is in part because of the excellent transparency they provide for the coders to interpret by graphically representing the decision-making process. Using this information, we can then predict the categorical variable class.
-In order to enhance the results of the decision tree classifier, we use the Random Forest as a meta estimator that fits a number of decision tree classifiers, each representing a different decision view of the same problem statement [2].
-Each tree is constructed on a sub-sample of the whole dataset & uses the average value to improve the accuracy of the model. The sample size is generally same as the original input sample size in order to avoid overfitting [3].
+In order to enhance the results of the decision tree classifier, we use the Random Forest as a meta estimator that fits a number of decision tree classifiers, each representing a different decision view of the same problem statement.
+Each tree is constructed on a sub-sample of the whole dataset & uses the average value to improve the accuracy of the model. The sample size is generally same as the original input sample size in order to avoid overfitting.
 
 ### Example
 Consider an example of taking a decision whether to play football based on the weather outside. In this example, the collection of trees is constructed and it provides a decision of whether to play or not. Hence, if the weather conditions are Sunny & the Humidity is less than or equal to 70, then its Yes to play.
@@ -169,11 +169,10 @@ The ‘No Free Lunch’ Theorem states that there is no one model that works bes
 In this project, we have used MNIST training dataset to train all four of the classifiers, and we have tested the models on both the MNIST and USPS datasets. 
 In order to prove the theorem, let us consider the accuracy value output for each type of classifier;
 
-|Algorithm</br> |Logistic Regression |Neural Network | Random Forest | Support Vector Machine|
-|Dataset  	    |		                 |               |               |                       |
-|---------------|--------------------|---------------|---------------|-----------------------|
-|MNIST	        |  90.77 %	         |   97.42 %	   |     96.47 %	 |        98.21 %        |
-|USPS	          |  35.52 %	         |   45.72 %	   |     38.51 %	 |        41.22 %        |
+|Algorithm used & Dataset |Logistic Regression |Neural Network | Random Forest | Support Vector Machine|
+|-------------------------|--------------------|---------------|---------------|-----------------------|
+|          MNIST	         |  90.77 %	          |    97.42 %	   |     96.47 %	  |        98.21 %        |
+|          USPS	          |  35.52 %	          |    45.72 %	   |     38.51 %	  |        41.22 %        |
 
 
 Based on the accuracy values, as each model is trained on the MNIST dataset, we see a pattern where the model can predict the values for MNIST with great accuracy, but when tested on the USPS dataset, the model fails to provide the same accuracy as before. This is mainly due to the fact that, even though both the datasets contain same type of images representing numbers, there are fundamental differences in the pixel representation and contours of images in both the datasets.
@@ -195,10 +194,9 @@ Considering the true positive predictions over all the predicted values for each
 Considering the overall performance of each classifier based on their Confusion Matrix, we get the following values;
 
 
-|Algorithm</br> |Logistic Regression |Neural Network | Random Forest | Support Vector Machine|Majority Voting Classifier|
-|Dataset  	    |		                 |               |               |                       |                          |
-|---------------|--------------------|---------------|---------------|-----------------------|--------------------------|
-|MNIST	        |  90.77 %	         |   97.42 %	   |     96.47 %	 |        98.21 %        |          98.04%          |
+|Algorithm used & Dataset |Logistic Regression|Neural Network|Random Forest|Support Vector Machine|Majority Voting Classifier|
+|-------------------------|-------------------|--------------|-------------|----------------------|--------------------------|
+|           MNIST	        |  90.77 %	         |   97.42 %	   |    96.47 %	 |        98.21 %       |          98.04%          |
 
 Now based on the ranking of each classifier we can deduce that when it comes to predicting each class, the most accurate is the Majority Voting Classifier, whereas the least accurate is the Logistic Regression Classifier. On the other hand, when we check the overall performance of the classifiers the most accurate is Support Vector Machine Classifier & the least accurate is the Logistic Regression Classifier.
 
