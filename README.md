@@ -4,7 +4,7 @@
 Human Visual System is one of the wonders of the Artificial Intelligence world, as it provides the precision and perception capabilities that even a computer cannot replicate. For example, consider the following sequence of handwritten digits:
 
 <p align="center">
-<img src="Images/1.png" width="300" height="100">
+<img src="Images/1.png">
 </p> 
 
 It can be safely assumed that most of the people can effortlessly recognize those digits as 504192. But this is not the case for a computer program, as it needs substantial number of features for each digit in the image, in order to successfully classify the digits from 0…9. 
@@ -15,14 +15,14 @@ A more doable approach is by using various features associated with each digit, 
 The MNIST Dataset (Modified National Institute of Standards and Technology) is a large dataset of handwritten digits that is widely used for training and testing in field of Machine Learning. The MNIST Dataset contains 60000 training images & 10000 testing images. Furthermore, each image is a black & white image from the NIST dataset, that is anti-aliased and normalized to fit a bounding box of 28x28 size. A sample collection of images from the MNIST dataset can be represented as follows:
  
 <p align="center">
-<img src="Images/2.png" width="400" height="400">
+<img src="Images/2.png">
 </p>
 
 ### The USPS Dataset	 
 The USPS Dataset (United States Postal Service) is a dataset of handwritten digits that is used as a testing dataset for this project. It contains 2000 image samples for each digit starting from 0 to 9. Each image is scaled at a resolution of 100 PPI and normalized to fit a bounding box of 28x28 size. A row of sample image for each digit can be represented as follows:
 
 <p align="center">
-<img src="Images/3.png" width="300" height="100">
+<img src="Images/3.png">
 </p> 
 
 ## Classification using Logistic Regression
