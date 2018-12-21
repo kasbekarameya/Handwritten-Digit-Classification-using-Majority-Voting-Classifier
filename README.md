@@ -181,16 +181,16 @@ Hence, this proves that the ‘No Free Lunch’ Theorem holds true.
 B. Observe the confusion matrix of each classifier and describe the relative strengths/weaknesses of each classifier. Which classifier has the overall best performance?</br> 
 Considering the true positive predictions over all the predicted values for each class from 0,1,2…9 of the Confusion Matrix, we can rank each classifier as follows;
  
-* Class 0: SVM > Majority Voting > Random Forest > NN > Logistic Regression
-* Class 1: SVM > Majority Voting > Random Forest > NN > Logistic Regression
-* Class 2: SVM > Majority Voting > Random Forest > NN > Logistic Regression
-* Class 3: Majority Voting > SVM > NN > Random Forest > Logistic Regression 
-* Class 4: Majority Voting > SVM > Random Forest > NN > Logistic Regression 
-* Class 5: NN > Majority Voting > SVM > Random Forest > Logistic Regression 
-* Class 6: Majority Voting > SVM > Random Forest > NN > Logistic Regression
-* Class 7: NN > Majority Voting > Random Forest > SVM > Logistic Regression
-* Class 8: SVM > Majority Voting > NN > Random Forest > Logistic Regression
-* Class 9: NN > Majority Voting > SVM > Random Forest > Logistic Regression
+* Class 0: **SVM > Majority Voting > Random Forest > NN > Logistic Regression**
+* Class 1: **SVM > Majority Voting > Random Forest > NN > Logistic Regression**
+* Class 2: **SVM > Majority Voting > Random Forest > NN > Logistic Regression**
+* Class 3: **Majority Voting > SVM > NN > Random Forest > Logistic Regression** 
+* Class 4: **Majority Voting > SVM > Random Forest > NN > Logistic Regression** 
+* Class 5: **NN > Majority Voting > SVM > Random Forest > Logistic Regression** 
+* Class 6: **Majority Voting > SVM > Random Forest > NN > Logistic Regression**
+* Class 7: **NN > Majority Voting > Random Forest > SVM > Logistic Regression**
+* Class 8: **SVM > Majority Voting > NN > Random Forest > Logistic Regression**
+* Class 9: **NN > Majority Voting > SVM > Random Forest > Logistic Regression**
 Considering the overall performance of each classifier based on their Confusion Matrix, we get the following values;
 
 
